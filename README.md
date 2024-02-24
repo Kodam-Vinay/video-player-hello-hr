@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+1> npm install -> to install packages
+2> npm start -> to run the project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+=> create a react app using npx create react app
 
-## Available Scripts
+=> installed and configured the tailwindcss for css(styling)
 
-In the project directory, you can run:
+=> installed react-router-dom for routing functionality
 
-### `npm start`
+=> installed react player for to play the video
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+=> used react-redux and @reduxjs/toolkit for data management
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+//video section
+=> starting it shows 18 videos in video section
 
-### `npm test`
+=> when the user click on the video the video will played
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+//video player
+=> in this video player there is no title for the video so I included the tags for this video
 
-### `npm run build`
+=> for mobile added swipUp and swipeDown functionality to change the video
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+=> created custom cotrolls: play, pause, previuos video, next video, change quality, volume increase ...etc
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+=> created a static like button
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+=> created a video progress indicator based on video current duration/time it will increase
+=>here not implemented seek functionality
 
-### `npm run eject`
+=> here the video will be paused automatically pause when video current duration reaches the video duration
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=> when there is an error while fetch call it return to errorPage

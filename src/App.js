@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import VideoList from "./components/VideoList";
+import VideoPlayer from "./components/VideoPlayer";
+import ErrorPage from "./components/ErrorPage";
+import useGetData from "./hooks/useGetData";
 
-function App() {
+const RenderLayout = () => {
+  useGetData();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="p-1 bg-black h-screen w-full overflow-hidden">
+      <Outlet />
     </div>
   );
+};
+
+function App() {
+  const browserRouter = createBrowserRouter([
+    {
+      path: "/",
+      element: <RenderLayout />,
+      children: [
+        {
+          path: "/video",
+          element: <VideoList />,
+        },
+        {
+          path: "/video/:id",
+          element: <VideoPlayer />,
+        },
+        {
+          path: "/error",
+          element: <ErrorPage />,
+        },
+        {
+          path: "/",
+          element: <VideoList />,
+        },
+        {
+          path: "*",
+          element: <VideoList />,
+        },
+      ],
+    },
+  ]);
+  return <RouterProvider router={browserRouter} />;
 }
 
 export default App;
