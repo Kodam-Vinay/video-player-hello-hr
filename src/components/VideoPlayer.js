@@ -89,7 +89,7 @@ const VideoPlayer = () => {
     }
   };
 
-  const minSwipeDistance = 50;
+  const minSwipeDistance = 30;
 
   const onTouchStart = (e) => {
     setTouchEnd(null);
