@@ -6,3 +6,10 @@ export const generateRandomNum = (startIndex, listLength) => {
   );
   return randomNum;
 };
+
+export const getIndex = (originalVideosList, presentVideo) => {
+  const findIndex = originalVideosList?.findIndex(
+    (each) => each?.id === presentVideo?.id
+  );
+  return findIndex;
+};

@@ -29,7 +29,7 @@ const VideoItem = ({ videoDetails, setActivePlayIconItem, isActive }) => {
           className={`w-56 h-40 rounded-md ${isActive ? "opacity-70" : ""}`}
         />
         {isActive && (
-          <div className="fixed -mt-24 ml-20">
+          <div className="-mt-24 ml-20 mb-14">
             <PlayIcon />
           </div>
         )}

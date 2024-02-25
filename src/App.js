@@ -8,7 +8,7 @@ import useGetData from "./hooks/useGetData";
 const RenderLayout = () => {
   useGetData();
   return (
-    <div className="p-1 bg-black h-screen w-full overflow-hidden">
+    <div className="p-1 bg-black min-h-screen w-full">
       <Outlet />
     </div>
   );

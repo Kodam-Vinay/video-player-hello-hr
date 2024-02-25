@@ -5,6 +5,7 @@ const videoPlayerSlice = createSlice({
   initialState: {
     presentVideo: {},
     remainaingVideosList: [],
+    index: 0,
   },
   reducers: {
     storePresentVideo: (state, action) => {
@@ -13,8 +14,11 @@ const videoPlayerSlice = createSlice({
     storeRemainingVideos: (state, action) => {
       state.remainaingVideosList = action.payload;
     },
+    storeIndexValue: (state, action) => {
+      state.index = action.payload;
+    },
   },
 });
-export const { storePresentVideo, storeRemainingVideos } =
+export const { storePresentVideo, storeRemainingVideos, storeIndexValue } =
   videoPlayerSlice.actions;
 export default videoPlayerSlice.reducer;

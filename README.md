@@ -11,6 +11,11 @@
 
 => used react-redux and @reduxjs/toolkit for data management
 
+=> created two custom hooks
+==> useGetData() -> it returns the data from pixabay api call https://pixabay.com/api/videos/?key=${process.env.REACT_APP_MY_API_KEY}&q=&pretty=true&page=
+
+==> useDeviceCheck() -> it returns the device type is "mobile" or not, with the help of this hook i implemented swipe up and down functionality for mobile and navigation buttons for desktop to change the video
+
 //video section
 => starting it shows 18 videos in video section
 
