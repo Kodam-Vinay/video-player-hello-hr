@@ -21,6 +21,10 @@
 
 => when the user click on the video the video will played
 
+=> Initillay it shows list of videos when we click on particular video it navigate to video-player component, and that video will be played on video player
+
+=> when the user directly open the video player, instead of navigating from video-list component a random number is generated based on random number index it set the video as present video and videos list will be created from the api call
+
 //video player
 => in this video player there is no title for the video so I included the tags for this video
 
